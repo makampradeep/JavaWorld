@@ -26,7 +26,11 @@ ans if n=5 and with 1
 4	*	4	*	4	*	4	
 3	*	3	*	3	
 2	*	2	
+<<<<<<< HEAD
 1
+=======
+1	
+>>>>>>> refs/heads/main
 
 
 */

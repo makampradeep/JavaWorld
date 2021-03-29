@@ -19,23 +19,16 @@ ans if n=5 and with 1
 
 
  	 	 	 	1	
- 	 	 	1	1	1	
- 	 	1	1	1	1	1	
- 	1	1	1	1	1	1	1	
-1	1	1	1	1	1	1	1	1
+ 	 	 	2	2	2	
+ 	 	3	3	3	3	3	
+ 	4	4	4	4	4	4	4	
+5	5	5	5	5	5	5	5	5
 
 
 */
-
-
-
-
-
-
-public class Pattern23 {
+public class Pattern24 {
 
 	public static void main(String[] args) {
-	
 		Scanner scn =new Scanner(System.in);
 		System.out.println("enter n for ur pattern");
 		int n =scn.nextInt();	
@@ -62,10 +55,12 @@ public class Pattern23 {
 			
 				nst=nst+2;
 				nsp=nsp-1;
-				
+				val++;
 			row++;
 		}
+			
 		
+
 	}
 
 }

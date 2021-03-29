@@ -26,6 +26,7 @@ ans if n=5 and with 1
 4	*	4	*	4	*	4	
 3	*	3	*	3	
 2	*	2	
+1
 **/
 
 public class Pattern32 {

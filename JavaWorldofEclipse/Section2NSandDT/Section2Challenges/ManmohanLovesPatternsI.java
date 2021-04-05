@@ -26,7 +26,7 @@ ans if n=5
 
 
 */
-public class ManmohanLovesPatterns11 {
+public class ManmohanLovesPatternsI {
 
 	public static void main(String[] args) {
 		Scanner scn =new Scanner(System.in);
@@ -35,25 +35,31 @@ public class ManmohanLovesPatterns11 {
 		int nst=1;
 		int row=1;
 		int val2=0;
+		int val=row;
 		while(row<=n)
 		{
-			int val=row;
+		
+			
 			//work
-			if(row!=1)
-			{
-				val=row-1;
-			}
+			
 			for(int cst=1;cst<=nst;cst++)
+			{
+				
+			if(row%2!=0)
+			{
+				System.out.print(val);
+			}
+			else
 			{
 				if(cst==1||cst==nst)
 				{
-			System.out.print(val);
+					System.out.print(val);
 				}
 				else
 				{
 					System.out.print(val2);
 				}
-			
+			}
 			}
 //			preperation for next row
 			
@@ -64,9 +70,7 @@ public class ManmohanLovesPatterns11 {
 		}
 
 	
+
 	}
-		
 
 }
-
-

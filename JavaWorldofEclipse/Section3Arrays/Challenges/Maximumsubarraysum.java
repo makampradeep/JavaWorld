@@ -28,6 +28,7 @@ Sample Input
 3
 -10 5 10
 Sample Output
+
 10
 15
 Explanation

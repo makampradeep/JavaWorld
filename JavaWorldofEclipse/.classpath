@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Section2NSandDT"/>
 	<classpathentry kind="src" path="Section3Arrays"/>
+	<classpathentry kind="src" path="Section4Strings"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

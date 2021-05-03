@@ -1,0 +1,139 @@
+package Challenges;
+
+import java.util.Scanner;
+/*
+ * 
+ * Piyush enters the park with strength S. The park is filled with some obstacles denoted by ‘.’ , some magical beans denoted by ‘*’ and some blockades denoted as ‘#’. If he encounters an obstacle (.) , strength decreases by 2. If he encounters a magic bean (' * ') , his strength increases by 5. Piyush can only walk row wise, so he starts from left of a row and moves towards right and he does this for every row. However when he encounters a blockade (#) , he cannot go any further in his current row and simply jumps to the start of a new line without losing any strength. Piyush requires a strength of 1 for every step. His strength should always be greater than K while traversing or else Piyush will get lost. Assume that Piyush can shift immediately from last of one row to the start of next one without loss of any strength, help out Piyush to escape the park. His escape is successful if he is able to return home with atleast K strength.
+
+Input Format
+First line of input contains four integers – N,M,K and S. Next N lines contains M space separated characters which can be '.', '*' or '#'.
+
+Constraints
+1 <= N,M,K,S <= 100
+
+Output Format
+Print "Yes" or "No" depending on whether Piyush can escape or not. If the answer is "Yes", also print the amount of strength he escaped with.
+
+Sample Input
+4 4 5 20
+. . * .
+. # . .
+* * . .
+. # * *
+Sample Output
+Yes
+13
+Explanation
+Piyush starts with strength S=20.
+For first row, he encounters a obstacle ‘.’ and his strength reduces by 3 ( 2+1 ( 1 for taking the step) ). Similarly after the second obstacle , his strength reduces by 3 again and becomes S=14. Then he encounters a '*' , and his strength increases by 5 but decreases by 1 for taking the step. Then his strength reduces by 2 (Not 3 as he will jump with no extra strength from here) after the last '.' . At the end of the first row his strength is S=16.
+
+In the second row, he encounters a ‘.’ and his strength reduces by 3( 2+1 for the '.' ). Then he encounters a '#' and without losing any extra strength simply jumps to the first cell of the next row.
+Similarly, his strength at the beginning of the third row is 13 and after completing it, his strength is 16.
+In the fourth row, he first encounters a '.' and his strength reduces to 13. Then he encounters a '#' at the second position and jumps to the next row. Since this is the last row, when he jumps he escapes from the park .
+His strength left is 13. Since this is clearly greater than K=5, his escape was successful.
+Piyush escaped with final strength = 13.
+ * 
+ * 
+ * 
+ * 
+ */
+public class PiyushandMagicalPark {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter m");
+		int m=scan.nextInt();
+		System.out.println("Enter n");
+		int n=scan.nextInt();
+		String [][] str=new String[m][n];
+		for(int i=0;i<str.length;i++)
+		{
+			for(int j=0;j<str[i].length;j++)
+			{
+				System.out.println("enter" +i+"and"+j);
+				str[i][j]=scan.next();
+			}
+		}
+		
+
+System.out.println("enter threshold");
+int threshold =scan.nextInt();
+System.out.println("enter Energy");
+int Energy =scan.nextInt();
+
+magicalpark(str,threshold,Energy);
+
+		
+		
+	}
+
+	
+	
+	
+	public static void magicalpark(String[][] str ,int k,int s)
+	{
+		
+		for(int i=0;i<str.length;i++)
+		{
+			
+			for(int j=0;j<str[i].length;j++)
+			{
+				if(s>=k)
+				{
+				if(str[i][j].charAt(0)=='.')
+				{
+					if(j<str[i].length-1)
+					{
+					s=s-2;
+					s=s-1;
+					}
+					else
+					{
+						s=s-2;
+					}
+				}
+				else if(str[i][j].charAt(0)=='*')
+				{
+					if(j<str[i].length-1)
+					{
+					s=s+5;
+				    s=s-1;
+					}
+					else
+					{
+						s=s+5;
+					}
+				}
+				else if(str[i][j].charAt(0)=='#')
+				{
+					break;
+				}
+				}
+			
+				else
+				{
+					break;
+				}
+		
+			
+			
+			}
+			
+		}
+		if(s>k)
+		{
+			System.out.println(s);
+			System.out.println("Yes");
+			
+		}
+		else
+		{
+			System.out.println("No");
+		}
+		
+		
+	}
+}

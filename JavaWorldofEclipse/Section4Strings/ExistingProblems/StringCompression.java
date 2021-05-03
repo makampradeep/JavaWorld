@@ -12,9 +12,10 @@ Output Format
 The compressed String.
 
 Sample Input
+
 aaabbccds
 Sample Output
-a3b2c2ds
+a3b2c2dsit
 Explanation
 In the given sample test case 'a' is repeated 3 times consecutively, 'b' is repeated twice, 'c' is repeated twice. But, 'd' and 's' occurred only once that's why we do not write their occurrence.
  */
